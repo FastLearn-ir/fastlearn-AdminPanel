@@ -1,4 +1,4 @@
-import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
+import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 
 const SidebarItem = ({title, icon}) => {
     return (

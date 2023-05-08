@@ -5,7 +5,7 @@ import SidebarItem from "./SidebarItem";
 
 const Sidebar = () => {
     return (
-        <Box component={'div'} className="h-screen bg-[#2B2C40] p-3">
+        <Box component={'div'} className="min-h-screen bg-[#2B2C40] p-3">
             <Typography 
                 component={'h2'}
                 fontSize={22}

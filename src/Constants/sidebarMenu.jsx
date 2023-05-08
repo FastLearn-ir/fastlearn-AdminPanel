@@ -9,12 +9,44 @@ import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import MovieCreationOutlinedIcon from '@mui/icons-material/MovieCreationOutlined';
 
 export const sidebarMenu = [
-    {id: uuidv4(), title: 'صفحه اصلی', icon: <ListOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
-    {id: uuidv4(), title: 'نقش ها و مجوزها', icon: <LockPersonOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
-    {id: uuidv4(), title: 'دوره ها', icon: <LocalMoviesOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
-    {id: uuidv4(), title: 'فصل ها', icon: <MovieCreationOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
-    {id: uuidv4(), title: 'اپیزودها', icon: <LiveTvOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
-    {id: uuidv4(), title: 'وبلاگ ها', icon: <AssignmentOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
-    {id: uuidv4(), title: 'دسته بندی ها', icon: <CategoryOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
-    {id: uuidv4(), title: 'کاربران', icon: <PermIdentityOutlinedIcon sx={{ color: "#DBDBEBAD" }} />},
+    {
+        id: uuidv4(), 
+        title: 'صفحه اصلی', 
+        icon: <ListOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+    },
+    {
+        id: uuidv4(), 
+        title: 'نقش ها و مجوزها', 
+        icon: <LockPersonOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+    },
+    {
+        id: uuidv4(), 
+        title: 'دوره ها', 
+        icon: <LocalMoviesOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+    },
+    {
+        id: uuidv4(), 
+        title: 'فصل ها', 
+        icon: <MovieCreationOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+    },
+    {
+        id: uuidv4(), 
+        title: 'اپیزودها', 
+        icon: <LiveTvOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+    },
+    {
+        id: uuidv4(), 
+        title: 'وبلاگ ها', 
+        icon: <AssignmentOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+    },
+    {
+        id: uuidv4(), 
+        title: 'دسته بندی ها', 
+        icon: <CategoryOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+    },
+    {
+        id: uuidv4(), 
+        title: 'کاربران', 
+        icon: <PermIdentityOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+    },
 ]
