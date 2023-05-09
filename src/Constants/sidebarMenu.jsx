@@ -19,7 +19,7 @@ export const sidebarMenu = [
         id: uuidv4(), 
         title: 'نقش ها و مجوزها', 
         icon: <LockPersonOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
-        href: 'rolse'
+        href: 'roles'
     },
     {
         id: uuidv4(), 
@@ -31,13 +31,13 @@ export const sidebarMenu = [
         id: uuidv4(), 
         title: 'فصل ها', 
         icon: <MovieCreationOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
-        href: ''
+        href: 'chapters'
     },
     {
         id: uuidv4(), 
         title: 'اپیزودها', 
         icon: <LiveTvOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
-        href: ''
+        href: 'episodes'
     },
     {
         id: uuidv4(), 

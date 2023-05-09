@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import { Sidebar, Topbar } from "../Components";
+import { Loading, Sidebar, Topbar } from "../Components";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 
 
@@ -11,7 +12,9 @@ const MainLayout = () => {
             </Grid2>
             <Grid2 xs={10} sx={{ backgroundColor: '#232333', p: 2 }}>
                 <Topbar/>
-                <Outlet/>
+                <Suspense fallback={<Loading/>}>
+                    <Outlet/>
+                </Suspense>
             </Grid2>
         </Grid2>
     )
