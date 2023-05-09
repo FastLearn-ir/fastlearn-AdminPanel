@@ -12,41 +12,49 @@ export const sidebarMenu = [
     {
         id: uuidv4(), 
         title: 'صفحه اصلی', 
-        icon: <ListOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+        icon: <ListOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: ''
     },
     {
         id: uuidv4(), 
         title: 'نقش ها و مجوزها', 
-        icon: <LockPersonOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+        icon: <LockPersonOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: 'rolse'
     },
     {
         id: uuidv4(), 
         title: 'دوره ها', 
-        icon: <LocalMoviesOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+        icon: <LocalMoviesOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: 'courses'
     },
     {
         id: uuidv4(), 
         title: 'فصل ها', 
         icon: <MovieCreationOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: ''
     },
     {
         id: uuidv4(), 
         title: 'اپیزودها', 
-        icon: <LiveTvOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+        icon: <LiveTvOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: ''
     },
     {
         id: uuidv4(), 
         title: 'وبلاگ ها', 
-        icon: <AssignmentOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+        icon: <AssignmentOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: 'blogs'
     },
     {
         id: uuidv4(), 
         title: 'دسته بندی ها', 
-        icon: <CategoryOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+        icon: <CategoryOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: 'category'
     },
     {
         id: uuidv4(), 
         title: 'کاربران', 
-        icon: <PermIdentityOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>
+        icon: <PermIdentityOutlinedIcon sx={{ color: "#DBDBEBAD" }}/>,
+        href: 'users'
     },
 ]

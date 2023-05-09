@@ -1,18 +1,19 @@
+import { Link } from "react-router-dom";
 import { ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 
-const SidebarItem = ({title, icon}) => {
+const SidebarItem = ({title, href, icon}) => {
     return (
         <ListItem disablePadding>
-            <ListItemButton>
-                <ListItemIcon>
-                    {icon}
-                </ListItemIcon>
-                <ListItemText primary={title} />
-            </ListItemButton>
+            <Link to={href} className="w-full">       
+                <ListItemButton>
+                    <ListItemIcon>
+                        {icon}
+                    </ListItemIcon>
+                    <ListItemText primary={title} />
+                </ListItemButton>
+            </Link>
         </ListItem>
     )
 }
 
 export default SidebarItem
-
-//sx={{ backgroundColor: '#DBDBEB0D', borderRadius: 2 }} list Item Button;
