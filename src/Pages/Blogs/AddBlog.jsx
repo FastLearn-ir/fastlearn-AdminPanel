@@ -1,14 +1,36 @@
 import { useState } from "react";
-import { Box, Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
-import { Editor } from "../../Components";
+import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Editor, SelectBox } from "../../Components";
+import { createBlog } from "../../Services/Axios/Api/blogsApi";
 
 const AddBlog = () => {
-    const [post, setPost] = useState('');
-    const [age, setAge] = useState('');
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [content, setContent] = useState('');
+    const [slug, setSlug] = useState('');
+    const [category, setCategory] = useState('');
+    const [tags, setTags] = useState([]);
+    const [thumbnail, setThumbnail] = useState({});
 
-    const handleChange = (event) => {
-        setAge(event.target.value);
-    };
+    const createNewBlog = async () => {
+        try {
+            const formData = new FormData();
+            formData.append('title', title)
+            formData.append('description', description)
+            formData.append('content', content)
+            formData.append('slug', slug)
+            formData.append('category', category)
+            formData.append('tags', tags)
+            formData.append('thumbnail', thumbnail)
+            console.log(formData);
+
+            const response = await createBlog(formData);
+            console.log(response);
+            
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <Box sx={{ mt: 3 }}>
@@ -20,8 +42,10 @@ const AddBlog = () => {
                     <Grid item xs={12} sm={6}>
                         <TextField
                             required
-                            id="firstName"
-                            name="firstName"
+                            id="title"
+                            name="title"
+                            value={title}
+                            onChange={e => setTitle(e.target.value)}
                             label="عنوان"
                             fullWidth
                         />
@@ -29,60 +53,34 @@ const AddBlog = () => {
                     <Grid item xs={12} sm={6}>
                         <TextField
                             required
-                            id="lastName"
-                            name="lastName"
+                            id="description"
+                            name="description"
+                            value={description}
+                            onChange={e => setDescription(e.target.value)}
                             label="توضیح"
                             fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} sm={12}>
                         <Typography component={'p'} fontSize={22} mb={2} className="text-white">محتوا</Typography>
-                        <Editor value={post} setValue={setPost}/>
+                        <Editor value={content} setValue={setContent}/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <TextField
                             required
                             id="url"
                             name="url"
+                            value={slug}
+                            onChange={e => setSlug(e.target.value)}
                             label="url"
                             fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Box>
-                            <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label">دسته بندی</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-label"
-                                    id="demo-simple-select"
-                                    value={age}
-                                    label="Age"
-                                    onChange={handleChange}
-                                >
-                                    <MenuItem value={10}>امنیت</MenuItem>
-                                    <MenuItem value={20}>Twenty</MenuItem>
-                                    <MenuItem value={30}>Thirty</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </Box>
+                        <SelectBox title={'دسته بندی'} value={category} setValue={setCategory}/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Box>
-                            <FormControl fullWidth>
-                                <InputLabel id="demo-simple-select-label">برچسب</InputLabel>
-                                <Select
-                                    labelId="demo-simple-select-label"
-                                    id="demo-simple-select"
-                                    value={age}
-                                    label="Age"
-                                    onChange={handleChange}
-                                >
-                                    <MenuItem value={10}>امنیت</MenuItem>
-                                    <MenuItem value={20}>Twenty</MenuItem>
-                                    <MenuItem value={30}>Thirty</MenuItem>
-                                </Select>
-                            </FormControl>
-                        </Box>
+                        <SelectBox title={'برچسب'} value={tags} setValue={setTags}/>
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <TextField
@@ -90,11 +88,12 @@ const AddBlog = () => {
                             id="file"
                             name="file"
                             type="file"
+                            onChange={e => setThumbnail(e.target.files[0])}
                             fullWidth
                         />
                     </Grid>
                     <Grid item xs={12} sm={6}>
-                        <Button variant="contained" color="warning">ثبت بلاگ جدید</Button>
+                        <Button variant="contained" color="warning" onClick={createNewBlog}>ثبت بلاگ جدید</Button>
                     </Grid>
                 </Grid>
             </Box>
