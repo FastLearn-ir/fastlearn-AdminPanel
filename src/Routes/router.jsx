@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { MainLayout } from "../Layouts/Index";
 
 const Blogs = lazy(() => import('../Pages/Blogs/Blogs'));
+const AddBlog = lazy(() => import('../Pages/Blogs/AddBlog'));
 const Category = lazy(() => import('../Pages/Category/Category'));
 const Chapters = lazy(() => import('../Pages/Chapters/Chapters'));
 const Courses = lazy(() => import('../Pages/Courses/Courses'));
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
             {
                 path: 'blogs',
                 element: <Blogs/>
+            },
+            {
+                path: 'blogs/add-blog',
+                element: <AddBlog/>
             },
             {
                 path: 'courses',

@@ -1,5 +1,6 @@
 export { default as ErrorPage } from './Error/ErrorPage'
 export { default as Blogs } from './Blogs/Blogs'
+export { default as AddBlog } from './Blogs/AddBlog'
 export { default as Category } from './Category/Category'
 export { default as Courses } from './Courses/Courses'
 export { default as Chapters } from './Chapters/Chapters'
